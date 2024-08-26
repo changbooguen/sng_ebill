@@ -97,7 +97,7 @@ onMounted( () => {
     <section class="content_bundle">
   
       <TitleComp>
-        <template #titleName>동sample서명</template>
+        <template #titleName>게시판 샘플</template>
       </TitleComp>
   
       <article class="basic panel">
