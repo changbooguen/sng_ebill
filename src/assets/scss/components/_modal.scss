@@ -1,0 +1,105 @@
+.v-application, .v-overlay {
+  .v-card-item {
+    .v-card-item__prepend {
+      i {
+        font-size: 2rem;
+        color: $gray300;
+      }
+    }
+    .v-card-title {
+      @include font(1.8rem);
+      font-weight: $bold;
+      color: $gray600;
+    }
+  }
+  .v-card-text {
+    padding: 1.6rem 3.2rem !important;
+    border-top: 1px solid $gray300;
+    border-bottom: 1px solid $gray300;
+    article {
+      display: flex;
+      &.column {
+        flex-direction: column;
+      }
+      &.row {
+        justify-content: space-between;
+      }
+      .bundle {
+        display: flex;
+        width: 100%;
+        margin-bottom: 1.6rem;
+        align-items: center;
+        .v-text-field {
+          input {
+            padding: 0 1.6rem;
+          }
+        }
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        &.button {
+          justify-content: end;
+          .v-btn {
+            margin-right: 0.8rem;
+            &:last-of-type {
+              margin-right: 0;
+            }
+          }
+        }
+        .subTitle {
+          width: 100%;
+          background: $gray200;
+          @include font(1.4rem);
+          padding: 0.8rem;
+          display: flex;
+          align-items: center;
+          border-radius: 0.8rem;
+          .v-icon {
+            font-size: 1.6rem;
+            margin-right: 0.4rem;
+            color: $gray300;
+          }
+          h3 {
+            color: $gray600;
+            font-weight: $medium;
+          }
+        }
+        .input_group {
+          margin-right: 1.6rem;
+          flex: 1 1 auto;
+        }
+        .v-table {
+          width: 100%;
+        }
+      }
+      .v-list {
+        width: 100%;
+        border: 1px solid $gray400;
+        padding: 0;
+        .v-list-item {
+          padding: 0 1.6rem;
+          .v-list-item-title {
+            @include font(1.4rem);
+          }
+        }
+      }
+      .button_wrap {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1.6rem;
+        .v-btn {
+          margin-bottom: 1.2rem;
+          height: 3.2rem;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .v-card-actions {
+    width: 100%;
+    justify-content: center !important;
+    padding: 1.2rem 0;
+  }
+}

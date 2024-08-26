@@ -1,0 +1,19 @@
+.v-card {
+  &.basic {
+    box-shadow: unset;
+    .v-tabs {
+      box-shadow: 0 0 4px 0 rgba(131, 129, 129, 0.4);
+      border-radius: 5rem;
+      margin: 2.4rem 3.2rem;
+      background: $coolGray50;
+      .v-btn {
+        &.v-btn.v-tab-item--selected {
+          font-weight: $bold;
+          .v-btn__content {
+            color: $gray800;
+          }
+        }
+      }
+    }
+  }
+}

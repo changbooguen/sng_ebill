@@ -1,0 +1,180 @@
+nav {
+  background: #fafafa;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  height: 11.6rem;
+  z-index: 1000;
+  section {
+    article {
+      &.top {
+        height: 6.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3.2rem;
+        h1 {
+          @include font(2rem);
+          font-weight: $bold;
+          color: $main_dark;
+        }
+        .v-card-text {
+          display: flex;
+          width: fit-content;
+          flex: unset;
+          .input_group {
+            flex: auto;
+            &.search {
+              max-width: 24rem;
+              margin-right: 0.8rem;
+              .search_input {
+                width: 24rem;
+              }
+            }
+            &.select {
+              max-width: 14rem;
+              .select_input {
+                width: 14rem;
+              }
+            }
+          }
+        }
+        .function_group {
+          display: flex;
+          align-items: center;
+          .my_page {
+            margin-right: 0.8rem;
+            padding: 0;
+            opacity: 0.6;
+            background: $main_dark;
+            color: $white;
+            width: 3.2rem;
+            height: 3.2rem;
+            i {
+              font-size: 2.4rem;
+            }
+            &:hover {
+              opacity: 1;
+            }
+          }
+          .client_name {
+            @include font(1.4rem);
+            margin-right: 0.8rem;
+            span {
+              color: $gray700;
+              font-weight: $bold;
+            }
+          }
+          .language_bundle {
+            margin: 0 1.6rem;
+            .v-btn {
+              height: 3.2rem;
+              @include font(1.3rem);
+              &.v-btn--variant-tonal {
+                font-weight: $bold;
+              }
+              &:first-of-type {
+                border-radius: 0.4rem 0 0 0.4rem;
+                padding: 0;
+              }
+              &:last-of-type {
+                border-radius: 0 0.4rem 0.4rem 0;
+                padding: 0;
+              }
+            }
+          }
+          .font_size_bundle {
+            @include font(1.3rem);
+            border: 1px solid $gray300;
+            padding: 0 0.8rem;
+            border-radius: 0.4rem;
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            height: 3.2rem;
+            font-weight: $medium;
+            color: $gray400;
+            .size {
+              margin-right: 0.8rem;
+            }
+            i {
+              font-size: 1.2rem;
+              &.v-icon {
+                color: $main_dark;
+                opacity: 0.6;
+                margin-right: 1.2rem;
+                cursor: pointer;
+                transition: all 0.4s;
+                &:hover {
+                  opacity: 1;
+                }
+                &:last-of-type {
+                  margin-right: 0;
+                }
+                &::before {
+                  font-size: 2.4rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      &.bottom {
+        .v-card {
+          border-radius: 0;
+          .v-layout {
+            .v-toolbar {
+              background: $main_dark !important;
+              .v-toolbar__extension {
+                justify-content: center;
+                .v-tab:first-child {
+                  margin-inline-start: unset;
+                }
+              }
+            }
+            &:hover {
+              .v-main {
+                .v-sheet.v-theme--light {
+                  display: block;
+                }
+              }
+            }
+            .v-main {
+              padding-top: 4.8rem;
+              .v-sheet.v-theme--light {
+                display: none;
+                padding: 1.6rem 0 0.8rem;
+                ul {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  li {
+                    @include font(1.5rem);
+                    color: $gray400;
+                    cursor: pointer;
+                    margin-bottom: 0.8rem;
+                    padding: 0.8rem 1.6rem;
+                    border-radius: 5rem;
+                    transition: all 0.3s;
+                    &:hover {
+                      background: $main_dark;
+                      color: $white;
+                    }
+                  }
+                }
+              }
+            }
+            .v-fab.v-fab--absolute.v-fab--bottom {
+              .v-btn.v-btn--elevated.v-btn--icon {
+                display: none;
+              }
+            }
+            .v-toolbar__content {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

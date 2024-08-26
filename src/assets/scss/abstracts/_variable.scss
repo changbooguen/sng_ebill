@@ -1,0 +1,49 @@
+/* 변수 및 공통 SCSS 정의 */
+$font-path: '@/assets/font/SpoqaHanSansNeo_TTF_subset/';
+$img-path: '@/assets/images/';
+$icon-path: '@/assets/icons/';
+
+/* color */
+$gray800: #1C1D1F;
+$gray700: #27282C;
+$gray600: #474C52;
+$gray500: #73787E;
+$gray400: #9FA4A8;
+$gray300: #CACDD2;
+$gray200: #EAEBED;
+$gray100: #F5F5F5;
+$coolGray50: #F7F8FA;
+$white: white;
+$black: black;
+
+$main: #2196F3;
+$main_dark: #065899;
+
+/* font-weight */
+$thin: 100;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+$ff: 'Spoqa Han Sans Neo', 'sans-serif';
+
+@each $num in 0, 4, 8, 12, 16, 20, 24, 28, 32 {
+  $remValue: calc($num / 10);
+  .mt#{$num} {
+    margin-top: #{$remValue}rem !important;
+  }
+  .mb#{$num} {
+    margin-bottom: #{$remValue}rem !important;
+  }
+  .ml#{$num} {
+    margin-left: #{$remValue}rem !important;
+  }
+  .mr#{$num} {
+    margin-right: #{$remValue}rem !important;
+  }
+}
+
+.underline {
+  text-decoration: underline;
+}

@@ -1,0 +1,22 @@
+.signature_wrap {
+  .example {
+    border: 1px solid $gray300;
+    border-radius: 0.8rem;
+    canvas {
+      border-radius: 0.8rem;
+    }
+  }
+  .signature_btn_bundle {
+    margin-top: 1.6rem;
+    button {
+      padding: 0 0.8rem;
+      height: 3.2rem;
+      background: $gray200;
+      border-radius: 0.8rem;
+      margin-right: 0.8rem;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}

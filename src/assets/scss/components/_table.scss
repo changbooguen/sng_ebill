@@ -1,0 +1,140 @@
+.table_count {
+  @include font(1.6rem);
+  color: $gray400;
+  margin-bottom: 1.6rem;
+  text-align: right;
+  span {
+    font-weight: $bold;
+    color: $gray800;
+  }
+}
+.v-table {
+  table {
+    @include font(1.5rem);
+    th {
+      background: rgba(6, 88, 153, 0.2);
+      color: $main_dark;
+    }
+    td {
+      color: $gray500;
+      .v-textarea {
+        margin: 1.6rem 0;
+      }
+      &.function {
+        & > div {
+          padding: 0.8rem 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .v_date_input {
+            max-width: 16rem;
+          }
+          & > span {
+            color: $black;
+            margin-right: 2.4rem;
+          }
+        }
+      }
+      .select_input {
+        min-width: 12rem;
+      }
+    }
+  }
+  &.compact {
+    border-radius: 0;
+    th {
+      background: $gray200;
+      color: $gray700;
+    }
+  }
+  &.border {
+    th, td {
+      border-right: 1px solid $gray400;
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+  }
+  &.hasRowRank {
+    thead {
+      th {
+        &.hasRow {
+          padding: 0;
+          div {
+            border-bottom: 1px solid $gray400;
+            padding: 0.8rem 0;
+          }
+          span {
+            min-width: 50%;
+            display: inline-block;
+            padding: 0.8rem 0;
+            border-right: 1px solid $gray400;
+            &:last-of-type {
+              border-right: none;
+            }
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          &.progress_bar {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+  &.multi_td {
+    tr {
+      th {
+        padding: 1.2rem 0;
+      }
+      td {
+        padding: 0.8rem;
+      }
+    }
+  }
+  &.inner_table {
+    border: 1px solid rgba(6, 88, 153, 0.2);
+    thead {
+      tr {
+        th {
+          height: 3.6rem !important;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          &.whiteSpace {
+            white-space: nowrap;
+          }
+          &.name_content {
+            span {
+              display: inline-block;
+              white-space: nowrap;
+              padding: 1.6rem;
+            }
+          }
+          &.table_btn_bundle {
+            min-width: 22rem;
+            .v-btn {
+              height: 2.8rem;
+              margin-right: 0.8rem;
+              .v-btn__prepend {
+                i {
+                  font-size: 1.6rem;
+                }
+              }
+              &:last-of-type {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

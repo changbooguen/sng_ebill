@@ -1,0 +1,53 @@
+main {
+  &.login {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $gray100;
+    section {
+      background: $white;
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+      display: flex;
+      border-radius: 0.8rem;
+      article {
+        width: 30rem;
+        padding: 2.4rem;
+        &.left {
+          background: $main_dark;
+          color: $white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 0.8rem 0 0 0.8rem;
+          h3 {
+            @include font(2.6rem);
+            font-weight: $bold;
+          }
+        }
+        &.right {
+          border-radius: 0 0.8rem 0.8rem 0;
+          h5 {
+            @include font(2.4rem);
+            font-weight: $bold;
+            color: $main_dark;
+            text-align: center;
+            margin-bottom: 4rem;
+          }
+          .v-btn {
+            font-weight: $bold;
+          }
+          .checkbox_small {
+            .v-icon {
+              font-size: 2rem;
+            }
+            .v-label {
+              @include font(1.4rem);
+            }
+          }
+        }
+      }
+    }
+  }
+}

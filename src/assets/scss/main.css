@@ -1,0 +1,952 @@
+@charset "UTF-8";
+/* 변수 파일은 항상 하위 scss로 존재할 것 */
+/* 변수 및 공통 SCSS 정의 */
+/* color */
+/* font-weight */
+.mt0 {
+  margin-top: 0rem !important;
+}
+
+.mb0 {
+  margin-bottom: 0rem !important;
+}
+
+.ml0 {
+  margin-left: 0rem !important;
+}
+
+.mr0 {
+  margin-right: 0rem !important;
+}
+
+.mt4 {
+  margin-top: 0.4rem !important;
+}
+
+.mb4 {
+  margin-bottom: 0.4rem !important;
+}
+
+.ml4 {
+  margin-left: 0.4rem !important;
+}
+
+.mr4 {
+  margin-right: 0.4rem !important;
+}
+
+.mt8 {
+  margin-top: 0.8rem !important;
+}
+
+.mb8 {
+  margin-bottom: 0.8rem !important;
+}
+
+.ml8 {
+  margin-left: 0.8rem !important;
+}
+
+.mr8 {
+  margin-right: 0.8rem !important;
+}
+
+.mt12 {
+  margin-top: 1.2rem !important;
+}
+
+.mb12 {
+  margin-bottom: 1.2rem !important;
+}
+
+.ml12 {
+  margin-left: 1.2rem !important;
+}
+
+.mr12 {
+  margin-right: 1.2rem !important;
+}
+
+.mt16 {
+  margin-top: 1.6rem !important;
+}
+
+.mb16 {
+  margin-bottom: 1.6rem !important;
+}
+
+.ml16 {
+  margin-left: 1.6rem !important;
+}
+
+.mr16 {
+  margin-right: 1.6rem !important;
+}
+
+.mt20 {
+  margin-top: 2rem !important;
+}
+
+.mb20 {
+  margin-bottom: 2rem !important;
+}
+
+.ml20 {
+  margin-left: 2rem !important;
+}
+
+.mr20 {
+  margin-right: 2rem !important;
+}
+
+.mt24 {
+  margin-top: 2.4rem !important;
+}
+
+.mb24 {
+  margin-bottom: 2.4rem !important;
+}
+
+.ml24 {
+  margin-left: 2.4rem !important;
+}
+
+.mr24 {
+  margin-right: 2.4rem !important;
+}
+
+.mt28 {
+  margin-top: 2.8rem !important;
+}
+
+.mb28 {
+  margin-bottom: 2.8rem !important;
+}
+
+.ml28 {
+  margin-left: 2.8rem !important;
+}
+
+.mr28 {
+  margin-right: 2.8rem !important;
+}
+
+.mt32 {
+  margin-top: 3.2rem !important;
+}
+
+.mb32 {
+  margin-bottom: 3.2rem !important;
+}
+
+.ml32 {
+  margin-left: 3.2rem !important;
+}
+
+.mr32 {
+  margin-right: 3.2rem !important;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.toast-enter-active,
+.toast-leave-active {
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.toast-enter,
+.toast-leave-to {
+  transform: translateY(4rem);
+  opacity: 0;
+}
+
+.toast-enter-to,
+.toast-leave {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@font-face {
+  font-family: "Spoqa Han Sans Neo";
+  font-weight: 700;
+  src: url("@/assets/font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.ttf") format("truetype"), url("@/assets/font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.woff2") format("woff2"), url("@/assets/font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.woff") format("woff"), url("@/assets/font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Bold.eot") format("eot");
+}
+@font-face {
+  font-family: "Spoqa Han Sans Neo";
+  font-weight: 500;
+  src: url("@/assets/font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.ttf") format("truetype"), url("@/assets/font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.woff2") format("woff2"), url("@/assets/font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.woff") format("woff"), url("@/assets/font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Medium.eot") format("eot");
+}
+@font-face {
+  font-family: "Spoqa Han Sans Neo";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("@/assets/font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.ttf") format("truetype"), url("@/assets/font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.woff2") format("woff2"), url("@/assets/font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.woff") format("woff"), url("@/assets/font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Regular.eot") format("eot");
+}
+@font-face {
+  font-family: "Spoqa Han Sans Neo";
+  font-weight: 300;
+  src: url("@/assets/font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Light.ttf") format("truetype"), url("@/assets/font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Light.woff2") format("woff2"), url("@/assets/font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Light.woff") format("woff"), url("@/assets/font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Light.eot") format("eot");
+}
+@font-face {
+  font-family: "Spoqa Han Sans Neo";
+  font-weight: 100;
+  src: url("@/assets/font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Thin.ttf") format("truetype"), url("@/assets/font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Thin.woff2") format("woff2"), url("@/assets/font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Thin.woff") format("woff"), url("@/assets/font/SpoqaHanSansNeo_TTF_subset/SpoqaHanSansNeo-Thin.eot") format("eot");
+}
+/* common layout properties */
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+input {
+  border: none;
+  background: transparent;
+}
+
+th, td {
+  font-weight: unset;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+pre {
+  margin: 0;
+}
+
+canvas {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+/* font-family */
+:is(html, body, pre, button, input, textarea) {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+input[type=text i] {
+  padding: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+body,
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.flex {
+  display: flex;
+}
+
+.non_cursor {
+  caret-color: transparent;
+}
+
+/* chrome 아이디, 패스워드 저장시에 input background 변경 막기 */
+/* 배경색과 동일하게 맞추기 */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #000;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:autofill,
+input:autofill:hover,
+input:autofill:focus,
+input:autofill:active {
+  -webkit-text-fill-color: #000;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:disabled {
+  background: transparent;
+  color: black;
+  /* safari & ios :disabled font-color change */
+  -webkit-text-fill-color: black;
+  -webkit-opacity: 1;
+}
+
+input:focus {
+  /* prevent the input like button */
+  -webkit-transform: translateZ(0px);
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-perspective: 1000;
+}
+
+/* chrome 2023.06.28 업데이트 이후 input focus outline 없애기 */
+input:focus, select:focus, option:focus, textarea:focus, button:focus {
+  outline: none;
+}
+
+/* form 태그 reset */
+form {
+  margin-block-end: 0;
+}
+
+/* input focus시에 placeholder 없애기 */
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+input:focus::placeholder {
+  opacity: 0;
+}
+
+/* Edge */
+input:focus::-ms-input-placeholder {
+  opacity: 0;
+}
+
+iframe {
+  overflow-clip-margin: content-box !important;
+  overflow: clip !important;
+  border-width: 0;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* For other browsers */
+summary::marker {
+  display: none;
+}
+
+img {
+  /*.chart_img {
+      background: center / contain no-repeat url($img-path + 'image_repayment_chart.jpg');
+      width: 100%;
+      height: 0;
+      padding-top: calc(112 / 312 * 100%);
+  }*/
+}
+
+.function_group {
+  display: flex;
+}
+.function_group select {
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("@/assets/icons/icon_24_select_arrow.svg") calc(100% - 5px) center no-repeat;
+  background-size: 2.4rem;
+}
+.function_group select::-ms-expand {
+  display: none;
+}
+.function_group input, .function_group select {
+  border-radius: 0.8rem;
+  min-width: 20rem;
+  height: 4rem;
+  border: 1px solid #ccc;
+  transition: all 0.3s;
+  background-color: white;
+  padding: 0 1.6rem;
+}
+.function_group input:focus, .function_group input:active, .function_group select:focus, .function_group select:active {
+  border: 1px solid #00ABB9;
+}
+
+button.primary {
+  font: 1.8rem/2.3rem "Spoqa Han Sans Neo", "sans-serif";
+  color: white;
+  font-weight: 700;
+  padding: 0 2.4rem;
+  background: #00ABB9;
+  border-radius: 0.8rem;
+}
+button.border {
+  border: 1px solid #00ABB9;
+  font-weight: 700 !important;
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+  border-radius: 0.8rem;
+  height: 4rem;
+  padding: 0 2.4rem;
+  color: #00ABB9;
+}
+
+table {
+  width: 100%;
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+  margin-bottom: 2.4rem;
+}
+table th, table td {
+  padding: 1.2rem 0;
+  cursor: pointer;
+}
+table th.center, table td.center {
+  text-align: center;
+}
+table thead tr {
+  border-top: 1px solid #00ABB9;
+  border-bottom: 1px solid #00ABB9;
+}
+table thead tr th {
+  background: #CEE8E8;
+  color: #555;
+}
+table tbody tr {
+  border-bottom: 1px solid #E5E5E5;
+}
+table tbody tr:last-of-type {
+  border-bottom: 1px solid #a7a7a7;
+}
+table tbody tr.fixed {
+  background: #EEF1F8;
+}
+table tbody tr td {
+  color: #888;
+}
+
+.pagination_wrap {
+  border: 1px solid #00ABB9;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.6rem;
+  width: fit-content;
+  margin: 0 auto 4rem;
+}
+.pagination_wrap button {
+  min-width: 2.4rem;
+  min-height: 2.4rem;
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+  color: #a7a7a7;
+  margin-right: 0.4rem;
+}
+.pagination_wrap button:last-of-type {
+  margin-right: 0;
+}
+.pagination_wrap button.prev {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.pagination_wrap button.next {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.pagination_wrap button.click {
+  color: #00ABB9;
+  font-weight: 700;
+}
+
+nav .first {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8rem;
+  padding: 0 6rem;
+  border-bottom: 1px solid #E5E5E5;
+}
+nav .first .event {
+  display: flex;
+  align-items: center;
+}
+nav .first .event button {
+  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
+}
+nav .first .event [data-type=line] {
+  background: #D9D9D9;
+  width: 1px;
+  height: 1.8rem;
+  margin: 0 1.6rem;
+  display: inline-block;
+}
+nav .second {
+  height: 6rem;
+  border-bottom: 1px solid #E5E5E5;
+}
+nav .second ul {
+  display: flex;
+  justify-content: center;
+}
+nav .second ul li {
+  margin-right: 4rem;
+}
+nav .second ul li:last-of-type {
+  margin-right: 0;
+}
+nav .second ul li button {
+  width: 12rem;
+  height: 6rem;
+  color: #A7A7A7;
+  font: 1.8rem/2.3rem "Spoqa Han Sans Neo", "sans-serif";
+}
+nav .second ul li button.active {
+  font-weight: 700;
+  border-bottom: 4px solid black;
+  color: black;
+}
+
+footer {
+  background: #F5F5F5;
+  padding: 4rem 0 2.4rem;
+}
+footer [data-type=divider] {
+  background: #ccc;
+  width: 1px;
+  height: 11.4rem;
+  margin: 0 4rem;
+}
+footer .top {
+  display: flex;
+  justify-content: center;
+}
+footer .top .bundle {
+  width: 18rem;
+}
+footer .top .bundle h4 {
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+  font-weight: 700;
+  color: #666;
+  margin-bottom: 1.6rem;
+}
+footer .top .bundle ul {
+  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
+  color: #888;
+}
+footer .top .bundle ul li {
+  margin-bottom: 0.8rem;
+}
+footer .bottom {
+  text-align: center;
+  color: #A7A7A7;
+  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
+  margin-top: 4rem;
+}
+
+.content_frame {
+  margin-top: 0.8rem;
+}
+.content_frame main h2.section_title {
+  font: 2.2rem/2.8rem "Spoqa Han Sans Neo", "sans-serif";
+  color: white;
+  font-weight: 700;
+  padding: 2.4rem 4rem;
+  background: #00ABB9;
+  border-radius: 5rem;
+  width: 60rem;
+  text-align: center;
+  margin: 0 auto;
+}
+.content_frame main section.middle {
+  margin: 6.4rem 0;
+  color: #00ABB9;
+}
+.content_frame main section.middle .main_color_content {
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+  margin-top: 2.4rem;
+  text-align: center;
+}
+.content_frame main section.middle .relation_website {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+.content_frame main section.middle .relation_website button {
+  width: 14rem;
+  height: 14rem;
+  border-radius: 1.6rem;
+  border: 1px solid #00ABB9;
+  margin-right: 4rem;
+}
+.content_frame main section.middle .relation_website button:last-of-type {
+  margin-right: 0;
+}
+.content_frame main section.middle .relation_website button img.post_plus {
+  width: 10rem;
+}
+.content_frame main section.middle .relation_website button img.KISA {
+  height: 8rem;
+}
+.content_frame main section.middle .relation_website button img.KT {
+  height: 6.4rem;
+}
+.content_frame main section.middle .relation_website button img.kakao {
+  height: 2.4rem;
+}
+.content_frame main section.youtube {
+  background: #CEE8E8;
+  padding: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content_frame main section.youtube img {
+  margin-bottom: 2.4rem;
+}
+.content_frame main section.youtube .content {
+  background: #a7a7a7;
+  color: white;
+  width: 60rem;
+  height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 3.6rem/4.5rem "Spoqa Han Sans Neo", "sans-serif";
+}
+.content_frame main.service_introduce .banner {
+  width: 100%;
+}
+.content_frame main.expect_effect .banner {
+  width: 100%;
+}
+.content_frame main.expect_effect .expect_section {
+  margin: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content_frame main.expect_effect .expect_section article {
+  width: 56rem;
+  background: #00ABB9;
+  border-radius: 2.4rem;
+  padding: 4rem 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.content_frame main.expect_effect .expect_section article:last-of-type {
+  margin-bottom: 0;
+}
+.content_frame main.expect_effect .expect_section article img {
+  margin-bottom: 3.2rem;
+}
+.content_frame main.expect_effect .expect_section article h4 {
+  font: 2.8rem/3.5rem "Spoqa Han Sans Neo", "sans-serif";
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+.content_frame main.expect_effect .expect_section article ul li {
+  margin-bottom: 0.8rem;
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+  text-align: center;
+}
+.content_frame main.expect_effect .expect_section article ul li:last-of-type {
+  margin-bottom: 0;
+}
+.content_frame main.download section.process_download {
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 8px solid #f5f5f5;
+}
+.content_frame main.download section.process_download:last-of-type {
+  border-bottom: 0;
+}
+.content_frame main.download section.process_download article {
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+.content_frame main.download section.process_download article .top {
+  width: 60rem;
+  margin: 0 auto;
+}
+.content_frame main.download section.process_download article .top .title {
+  display: flex;
+  margin-bottom: 0.8rem;
+}
+.content_frame main.download section.process_download article .top .title h3 {
+  font: 3.6rem/4.5rem "Spoqa Han Sans Neo", "sans-serif";
+  font-weight: 700;
+}
+.content_frame main.download section.process_download article .top .title h3:first-of-type {
+  color: #a7a7a7;
+  margin-right: 1.6rem;
+}
+.content_frame main.download section.process_download article .top .title h3:last-of-type {
+  color: #333;
+}
+.content_frame main.download section.process_download article .top .sub_comment {
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+  color: #666;
+}
+.content_frame main.download section.process_download article .img_box {
+  display: flex;
+}
+.content_frame main.download section.process_download article .img_box.column {
+  flex-direction: column;
+  align-items: center;
+}
+.content_frame main.download section.process_download article .img_box.column .download {
+  cursor: pointer;
+}
+.content_frame main.download section.process_download article .img_box.row {
+  flex-direction: row;
+  justify-content: center;
+}
+.content_frame main.download section.process_download article .img_box.row img {
+  margin-right: 3.2rem;
+}
+.content_frame main.download section.process_download article .img_box.row img:last-of-type {
+  margin-right: 0;
+}
+.content_frame main.notice {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.content_frame main.inquire {
+  width: 80rem;
+  margin: 4rem auto;
+}
+.content_frame main.inquire .withBtn {
+  position: relative;
+}
+.content_frame main.inquire .withBtn .floatBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.content_frame main.inquire .search_input .function_group {
+  justify-content: end;
+}
+.content_frame main.inquire .search_input .function_group label {
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+  margin-right: 1.6rem;
+  color: #666;
+  line-height: 4rem;
+}
+.content_frame main.inquire .search_input .function_group .search_select {
+  margin-right: 2.4rem;
+  min-width: 8rem;
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+  font-weight: 500;
+  color: #666;
+}
+.content_frame main.inquire .search_input .function_group .title_search {
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+}
+.content_frame main.inquire .accordion {
+  margin: 2.4rem 0;
+}
+.content_frame main.inquire .accordion details {
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+  color: #555;
+}
+.content_frame main.inquire .accordion details[open] {
+  transform: rotate(0);
+}
+.content_frame main.inquire .accordion details[open] .arrow {
+  transform: rotate(180deg);
+}
+.content_frame main.inquire .accordion details .character {
+  font-weight: 700;
+  margin-right: 0.8rem;
+}
+.content_frame main.inquire .accordion details .character.Q {
+  color: #118DF0;
+}
+.content_frame main.inquire .accordion details .character.A {
+  color: #4BB832;
+}
+.content_frame main.inquire .accordion details summary {
+  width: 80rem;
+  height: 5.6rem;
+  background: #e5e5e5;
+  border: 1px solid #ccc;
+  list-style: none;
+  cursor: pointer;
+  line-height: 4rem;
+  padding: 0 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+.content_frame main.inquire .accordion details summary.click {
+  background: #CEE8E8;
+  border: 1px solid #00ABB9;
+}
+.content_frame main.inquire .accordion details summary .left {
+  display: flex;
+  align-items: center;
+}
+.content_frame main.inquire .accordion details summary .right {
+  display: flex;
+  align-items: center;
+}
+.content_frame main.inquire .accordion details summary .right .notDone, .content_frame main.inquire .accordion details summary .right .done {
+  width: 6rem;
+  height: 3.2rem;
+  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
+  font-weight: 500;
+  color: white;
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.6rem;
+}
+.content_frame main.inquire .accordion details summary .right .notDone {
+  background: #F9A602;
+}
+.content_frame main.inquire .accordion details summary .right .done {
+  background: #118DF0;
+}
+.content_frame main.inquire .accordion details summary .right .user {
+  margin: 0 1.6rem;
+  color: #666;
+}
+.content_frame main.inquire .accordion details summary .right .password {
+  width: 12rem;
+  height: 2.8rem;
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+  background: white;
+  border-radius: 5rem;
+  border: 1px solid #00ABB9;
+  text-align: center;
+}
+.content_frame main.inquire .accordion details summary .right .password::placeholder {
+  color: #888;
+}
+.content_frame main.inquire .accordion details .answer {
+  height: 5.6rem;
+  border: 1px solid #ccc;
+  line-height: 4rem;
+  padding: 0 1.6rem;
+  display: flex;
+  align-items: center;
+}
+.content_frame main.inquire_detail {
+  width: 80rem;
+  margin: 6.4rem auto 3.2rem;
+}
+.content_frame main.inquire_detail .title_wrap {
+  color: #00ABB9;
+  font-weight: 500;
+}
+.content_frame main.inquire_detail .title_wrap h2 {
+  font: 3.6rem/4.5rem "Spoqa Han Sans Neo", "sans-serif";
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #CEE8E8;
+}
+.content_frame main.inquire_detail .content {
+  margin: 2.4rem 0 3.2rem;
+}
+.content_frame main.inquire_detail .content .flat {
+  display: flex;
+  width: 100%;
+}
+.content_frame main.inquire_detail .content .flat .info_bundle {
+  width: 50%;
+  margin-right: 3.2rem;
+}
+.content_frame main.inquire_detail .content .flat .info_bundle:last-of-type {
+  margin-right: 0;
+}
+.content_frame main.inquire_detail .content .info_bundle {
+  height: 4.8rem;
+  border-radius: 0.8rem;
+  border: 1px solid #ccc;
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+  display: flex;
+}
+.content_frame main.inquire_detail .content .info_bundle .title {
+  color: #666;
+  background: #f5f5f5;
+  height: 4.6rem;
+  min-width: 12rem;
+  text-align: center;
+  line-height: 4.8rem;
+  border-right: 1px solid #ccc;
+  border-radius: 0.8rem 0 0 0.8rem;
+}
+.content_frame main.inquire_detail .content .info_bundle .info_content {
+  color: #555;
+  width: 100%;
+  min-width: 12rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 4.8rem;
+}
+
+.search_panel_wrap {
+  background: #f5f5f5;
+  border-radius: 1.6rem;
+  margin: 4rem 0;
+  padding: 2.4rem;
+}
+.search_panel_wrap .inner {
+  display: flex;
+  justify-content: center;
+}
+.search_panel_wrap .inner .function_group {
+  margin-right: 4rem;
+}
+.search_panel_wrap .inner .function_group label {
+  margin-right: 1.6rem;
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+  color: #666;
+  line-height: 4rem;
+}
+.search_panel_wrap .inner .function_group:last-of-type {
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=main.css.map */

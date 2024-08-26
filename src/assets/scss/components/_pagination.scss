@@ -1,0 +1,32 @@
+nav {
+  &.v-pagination {
+    height: 4rem;
+    background: unset;
+    box-shadow: unset;
+    position: relative;
+    width: unset;
+    z-index: unset;
+    .v-pagination__list {
+      li {
+        &.v-pagination__item--is-active {
+          .v-btn {
+            .v-btn__overlay {
+              opacity: 1;
+              background: $main_dark;
+            }
+            .v-btn__content {
+              opacity: 1;
+              color: $white;
+              z-index: 40;
+              font-weight: $bold;
+            }
+          }
+        }
+        button {
+          width: 3.2rem;
+          height: 3.2rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+button {
+  &.v-btn.v-btn--density-default {
+    @include font(1.4rem);
+    i {
+      font-size: 2rem;
+    }
+    &.v-btn--variant-tonal {
+       background: $main_dark;
+       color: $white;
+       &:hover {
+         opacity: 0.4;
+         background: $main_dark;
+       }
+     }
+    &.v-btn--variant-outlined {
+      border: 1px solid $main_dark;
+      color: $main_dark;
+      &:hover {
+        opacity: 0.4;
+        background: $main_dark;
+        color: $white;
+      }
+    }
+  }
+  &.login {
+    width: 100%;
+    border-radius: 5rem;
+    background: $main_dark;
+    color: $white;
+    @include font(1.6rem);
+    font-weight: $bold;
+  }
+  &.v-btn {
+    &.negative {
+      background: $gray600 !important;
+      &.border {
+        background: $white !important;
+        border: 1px solid $gray600 !important;
+        color: $gray600 !important;
+      }
+    }
+    &.search_btn {
+      height: 4rem;
+    }
+  }
+}
